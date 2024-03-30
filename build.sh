@@ -1,6 +1,6 @@
 #!/bin/bash
 #Script to build buildroot configuration
-#Author: Siddhant Jajoo
+#Author: TalH
 
 source shared.sh
 
