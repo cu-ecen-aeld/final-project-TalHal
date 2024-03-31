@@ -1,6 +1,5 @@
 
 config BR2_PACKAGE_LDD
-	bool "ldd"
+	bool "snull"
 	help
-	  Includes the hello, faulty and scull kernel modules in the kernel image.
-	  Used to understand buildroot external trees and package builds.
+	  Includes snull kernel module in the kernel image.
