@@ -1,35 +1,16 @@
 
 # Overview
 
-The goals of this project is to learn about the following Linux kernel features:
- - Network tunnels - TUN.
- - Network drivers.
- - Client/Server applications.
-
-The application would be composed of 2 threads: a receive thread to receive packets form the Tunnel.
-The second thread would be a client the would send the packet to a dedicated network device.
-
-The network device would be created by a dummy network driver. This Dummy network driver would hold 2 netdevices and implement a loopback between them.
+The goals of this project is to create a basic tool for p2p network protocols testing.
+A network protocol developer can use the tool by adding packet processing code.
+The code is based on the following SW componenets:
+- pusher
+- rreceiver
+- snull
+- bridge br0 configure to include following network interfaces: eth1 and tap0.
 
 
    ![final_project](https://github.com/cu-ecen-aeld/final-project-TalHal/assets/67574645/67b24e26-0f7c-4142-ab7e-3852c8535e32)
-
-
-
-             ############################################         #########################################     ####################################
-             #                                          #  queue  #                                       #     #                                  #
-             # Userspace Application 1 - Receive thread ########### Userspace Application 1 - Send thread #     # Userspace Application 2 - Server # 
-             #                                          #         #                                       #     #                                  #
-             ############################################         #########################################     #################################### 
-                         #                                                    #                                       #
-                         # Tunnel                                             # Socket                                # Socket
-                         #                                                    #                                       #
-                         #                                                    #                                       #
-             #########################                                  ######################            #####################
-             #                       #                                  #                    #  Loopback  #                   #
-             # Kernel Network Stack  #                                  # Dummy Netdevice 0  ############## Dummy Netdevice 1 #
-             #                       #                                  #                    #            #                   #
-             #########################                                  ######################            ##################### 
 
 
 
@@ -37,34 +18,26 @@ The network device would be created by a dummy network driver. This Dummy networ
 buildroot
 
 # Hardware Platform
-1 Rapberry PI 4.
-Booted from sdcard burned with sdcard image created by buildroot build for Raspberry PI.
+Rapberry PI (Specifically used version 4).
+sdcard.img is burned to sdcard.
 
 
 # Open Source Projects Used
-Project would be based on Assignment 5 buildroot.
+Project would be based on Assignment 5 buildroot as a starting point that include buildroot.
 
 # Previously Discussed Content
 
 # New Content
-Creating a tun/tap netdevice
-encryption/decryption
-Network drivers
-
+How to create a tun/tap netdevice.
+Setup a Network driver
+Client/server with RAW sockets.
 
 # Shared Material
 Using assignment 5 buildroot as a starting point.
 
 # Source Code Organization
-TBD: Modify the content below:
 
-Buildroot Repository will be hosted at https://github.com/cu-ecen-aeld/final-project-TalHal
-
-Network driver code will be hosted in in a repository at https://github.com/cu-ecen-aeld/final-project-TalHal
-
-Encrypt Application would be hosted in https://github.com/cu-ecen-aeld/final-project-TalHal
-
-Decrypt Application would be hosted at https://github.com/cu-ecen-aeld/final-project-TalHal
+All code will be hosted at https://github.com/cu-ecen-aeld/final-project-TalHal
 
 
 ## Team project members:
