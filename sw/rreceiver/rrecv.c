@@ -8,6 +8,7 @@
 #include <string.h>
 #include <unistd.h>
 
+#define MTU_SIZE 1500
 int main(int arc, char **argv)
 {
     int err = 0, rc, i, j;
@@ -44,13 +45,13 @@ int main(int arc, char **argv)
         printf("bind failed with error: %d\n", err);
     }
 
-    const uint8_t buf[16] = {};
+    const uint8_t buf[MTU_SIZE] = {};
 
 
-    for (i = 0; i < 10; i++) {
-	    rc = recv(netsock, (void *)buf, 16, 0);
+    while (1) {
+	    rc = recv(netsock, (void *)buf, MTU_SIZE, 0);
 	    printf("%d bytes received \n", rc);
-	    for (j = 0; j < 16; j++) {
+	    for (j = 0; j < rc; j++) {
 	    	printf("0x%x ", buf[j]);
 	    }
 
