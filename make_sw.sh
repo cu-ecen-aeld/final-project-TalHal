@@ -5,15 +5,19 @@ set -e
 SCRIPTPATH="$( cd -- "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
 echo $SCRIPTPATH
 
-if [ $1 = "clean" ]; then
+echo "num arguments: $#"
 
-	echo "cleanning ... "
-	make -C sw/rsender/ clean
-	make -C sw/rreceiver/ clean
-	make -C sw/tun/ clean
-	make -C sw/pusher clean
+if [ $# -eq 1 ]; then
+	if [ $1 = "clean" ]; then
 
-	exit 0
+		echo "cleanning ... "
+		make -C sw/rsender/ clean
+		make -C sw/rreceiver/ clean
+		make -C sw/tun/ clean
+		make -C sw/pusher clean
+
+		exit 0
+	fi
 fi
 
 # build buildroot only for toolchain
