@@ -7,7 +7,7 @@ The code is based on the following SW componenets:
 - pusher
 - rreceiver
 - snull
-- bridge br0 configure to include following network interfaces: eth1 and tap0.
+- bridge br0 configure to include network interfaces: ethX and tap0.
 
 
    ![final_project](https://github.com/cu-ecen-aeld/final-project-TalHal/assets/67574645/67b24e26-0f7c-4142-ab7e-3852c8535e32)
@@ -20,6 +20,11 @@ buildroot
 # Hardware Platform
 Rapberry PI (Specifically used version 4).
 sdcard.img is burned to sdcard.
+Laptop connected to Raspbery with ethernet PI via SSH for control.
+Also another ethernet connection between Laptop and Raspberry used for data traffic.
+
+
+![hw](https://github.com/cu-ecen-aeld/final-project-TalHal/assets/67574645/1fb4f603-0f04-4d7d-a07b-123c31ba1b99)
 
 
 # Open Source Projects Used
