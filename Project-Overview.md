@@ -31,11 +31,14 @@ Also another ethernet connection between Laptop and Raspberry used for data traf
 Project would be based on Assignment 5 buildroot as a starting point that include buildroot.
 
 # Previously Discussed Content
+The network driver is based on snull of ldd3 which was discussed previouslly.
+server/client implementation.
 
 # New Content
-How to create a tun/tap netdevice.
-Setup a Network driver
-Client/server with RAW sockets.
+Server/client implementations whjich are based on raw sockets.
+Tap implementation.
+snull usage and functioality.
+linux bridge functionality.
 
 # Shared Material
 Using assignment 5 buildroot as a starting point.
