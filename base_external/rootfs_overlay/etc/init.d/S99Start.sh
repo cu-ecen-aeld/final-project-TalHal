@@ -8,3 +8,6 @@ insmod /lib/modules/5.10.92-v7l/kernel/drivers/net/tun.ko
 insmod ./lib/modules/5.10.92-v7l/extra/snull.ko
 
 ifconfig sn0 192.164.1.5
+
+/apps/network_conf.sh
+
