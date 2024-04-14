@@ -6,5 +6,7 @@ https://github.com/users/TalHal/projects/1/views/1?groupedBy%5BcolumnId%5D=86905
 
 # Project Video
 
+https://github.com/cu-ecen-aeld/final-project-TalHal/blob/main/Tals-Final-Project-Video.md
+
 
 
