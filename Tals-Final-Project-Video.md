@@ -3,7 +3,7 @@
 This page provide's an overview of Tal's contribution to the AESD Final Project final-project-assignment-raspberry-tun-server-client
 
 # Video Outline
-See <TODO: insert link to video>
+See https://youtu.be/RaxQf1K3XsU
 
 The video demonstrates:
 * Project's SW and HW overview
